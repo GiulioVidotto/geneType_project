@@ -20,6 +20,7 @@ Description:
 	are inherited from a virtual product class.
 License: GPL-2
 URL: https://www.genenames.org/about/guidelines/
+     https://github.com/giuliovidotto01/geneTypes
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Suggests: testthat (>= 3.0.0), knitr, rmarkdown, BiocStyle

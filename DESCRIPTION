@@ -1,0 +1,29 @@
+Package: geneTypes
+Title: R package for gene objects which represent different gene types
+Depends: R(>= 4.1.0)
+Imports: GenomicRanges, Biostrings, methods
+Version: 0.99.0
+Encoding: UTF-8
+Authors@R: 
+    person(given = "Giulio",
+    	   family = "Vidotto",
+	   role = c("aut", "cre"),
+           email = "giulio.vidotto@polimi.it", 
+	   comment = c(ORCID = "0000-0002-3066-7397"))
+Description:
+	The package called "geneTypes" provides a set of S4 classes for different gene types.
+	The gene types included in the package are protein-coding genes, long noncoding RNA
+	genes, microRNA genes, rRNA genes, and tRNA genes. All of these S4 classes are inherited
+	from a virtual gene class that represents genes in general. In the package, there are
+	additional S4 classes that represent the products (proteins, lncRNAs, microRNAs, rRNAs,
+	and tRNAs) of each gene class. These S4 classes that represent the products of the genes
+	are inherited from a virtual product class.
+License: GPL-2
+URL: https://www.genenames.org/about/guidelines/
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Suggests: testthat (>= 3.0.0), knitr, rmarkdown, BiocStyle
+biocViews: Genetics, BiomedicalInformatics
+VignetterBuilder: knitr
+Config/testthat/edition: 3
+VignetteBuilder: knitr

@@ -30,7 +30,7 @@
   "The gene enemblID is not correct".
 
 
-## **Methods of the class**
+### **Methods of the class**
 
 ### - getGeneId
 

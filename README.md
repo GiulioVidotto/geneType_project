@@ -47,7 +47,7 @@
 
 
 
-### setSymbol
+### - setSymbol
 
   This is a method of the "gene" class, called **"setSymbol"**, that can be used to change the information about the HUGO gene symbol.
   This method requires to specify two paramters. the first one, called "object" which rapresents a gene and the second one, called
@@ -55,14 +55,14 @@
 
 
 
-### getFullName
+### - getFullName
 
   This is a method of the "gene" class, called **"getFullName"**, that allows the user to extract the information about the full name
   of the gene. This method has only one parameter, called "object", which is a gene.
 
 
 
-### setFullName
+### - setFullName
 
   This is a method of the "gene" class, called **"setFullName"**, that allows the user to change the information about the full name of
   the gene. This method has two parameters, the first one is called "object" which represents a gene, and the second parameter is called
@@ -70,7 +70,7 @@
 
 
 
-### getDescription
+### - getDescription
 
   This is a method of the "gene" class, called **"getDescription"**, and it allows the user to extract the description of a specific 
   gene. This method has only one parameter, which is called "object", and it is the gene for which the user wants to inspect the
@@ -78,7 +78,7 @@
 
 
 
-### setDescription
+### - setDescription
 
   This is a method of the "gene" class, called **"setDescription"**, and it allows the user to change the description of a specific gene. It
   takes as parameters, a gene ("object") and a new description for the gene ("new_description"). The new description must be of class "character",
@@ -86,7 +86,7 @@
 
 
 
-### getStructure
+### - getStructure
 
   This is a method of the "gene" class, called **"getStructure"**, and it allows the user to extract from a specific object all the information on
   the structure of the gene. It reqeuires only one parameter, which is called "object" and it is the gene for which the user wants to know the
@@ -94,14 +94,14 @@
 
 
 
-### setStructure
+### - setStructure
 
   This is a method of the "gene" class, called **"setStructure"**, that is useful to extract from a specific gene all the information about the structure.
   It requires two paramters: the "object" parameter, which is the gene, and the "new_structure" parameter which is the new structure of the gene. This 
   second parameter must be of class GRanges, otherwise the method will rise the followin "The new defined structure of the gene is not correct".
 
 
-# product class
+# - product class
 
 
 
@@ -114,7 +114,7 @@
 
   From this virtual class, other classes represent the specific products for the different types of genes:
 
-### Protein
+### - Protein
 
   This class is called "Protein" and it inherits from the virtual class "product". It inherits the attribute called Ensembl ID from the virtual class "product" and it has also other two 
   attributes which are the sequence of the protein ("protein_sequence") and the description of the protein ("description"). To further specify the object of the class, two additional
@@ -123,7 +123,7 @@
     * The aminoacid of the protein sequence must be valid, otherwise, it will raise the following: "In the protein sequence there are one or more invalid aminoacids".
 
 
-### LongNonCodingRNA
+### - LongNonCodingRNA
 
   This class is called "LongNonCodingRNA" and it inherits from the virtual class "product". It inherits the attribute called Ensembl ID from the virtual class "product" and it has also other two 
   attributes which are the sequence of the LongNonCodingRNA ("long_non_coding_RNA_sequence") and the regulatory mechanism of the LongNonCodingRNA ("regulatory_mechanism"). To further specify 
@@ -131,7 +131,7 @@
     * The Ensembl ID of the Long Non-Coding RNA must start with "ENST" followed by 11 digits, otherwise, it will raise the following: "The long noncoding RNA enemblID is not correct".
 
 
-### microRNA
+### - microRNA
 
   This class is called "MicroRNA" and it inherits from the virtual class "product". It inherits the attribute called Ensembl ID from the virtual class "product" and it has also other two 
   attributes which are the sequence of the MicroRNA ("microRNA_sequence") and the description of the silencing mechanism of the MicroRNA ("silencing_mechanism"). To further specify the
@@ -139,7 +139,7 @@
     * The Ensembl ID of the microRNA must start with "ENST" followed by 11 digits, otherwise, it will raise the following: "The microRNA enemblID is not correct".
   
 
-### tRNA
+### - tRNA
 
   This class is called "tRNA" and it inherits from the virtual class "product". It inherits the attribute called Ensembl ID from the virtual class "product" and it has also other three 
   attributes which are the sequence of the tRNA ("tRNA_sequence"), the aminoacid carried by the tRNA ("aminoacid"), and the anticodon present on the tRNA ("anticodon").
@@ -149,7 +149,7 @@
     * The anticodon must have a length of 3 base pairs, otherwise, it will raise the following: "Invalid anticodon".
   
 
-### rRNA
+### - rRNA
 
   This class is called "rRNA" and it inherits from the virtual class "product". It inherits the attribute called Ensembl ID from the virtual class "product" and it has also other two 
   attributes which are the sequence of the rRNA ("rRNA_sequence") and the ribosomal subunit ("ribosomal_subunit").
@@ -190,19 +190,19 @@ gene1 <- proteinCodingGene(
 
 **Methods of the class**
 
-### getGeneId
+### - getGeneId
 
 ```{r}
 getGeneId(gene1)
 ```
 
-### getSymbol
+### - getSymbol
 
 ```{r}
 getSymbol(gene1)
 ```
 
-### setSymbol
+### - setSymbol
 
   This is a method inherited from the "gene" class, For the class "ProteinCodingGene" there have been added additional constrains regarding the new HUGO
   gene symbol. Indeed it must be of class "character" and also must be uppercase, otherwise, the following will raise: "Invalid gene symbol".
@@ -212,13 +212,13 @@ gene1 <- setSymbol(gene1, "GENE2")
 gene1
 ```
 
-### getFullName
+### - getFullName
 
 ```{r}
 getFullName(gene1)
 ```
 
-### setFullName
+### - setFullName
 
   This is a method inherited from the "gene" class, For the class "ProteinCodingGene" there have been added additional constrains regarding the new full
   gene name. Indeed it must be of class "character" and also must be uppercase, otherwise, the following will raise: "Invalid full gene name".
@@ -228,33 +228,33 @@ gene1 <- setFullName(gene1, "GENE TWO")
 gene1
 ```
 
-### getDescription
+### - getDescription
 
 ```{r}
 getDescription(gene1)
 ```
 
-### setDescription
+### - setDescription
 
 ```{r}
 gene1 <- setDescription(gene1, "This gene has no specific function")
 gene1
 ```
 
-### getStructure
+### - getStructure
 
 ```{r}
 getStructure(gene1)
 ```
 
-### setStructure
+### - setStructure
 
 ```{r}
 gene1 <- setStructure(gene1, GRanges("chr1:100-200"))
 gene1
 ```
 
-### getProtein
+### - getProtein
 
   This is a method of the class "ProteinCodingGene" class. It allows the user to acccess the information about the protein(s) codified by the gene.
 
@@ -262,7 +262,7 @@ gene1
 getProteins(gene1)
 ```
 
-### setProtein
+### - setProtein
 
   This is a method of the class "ProteinCodingGene" class. It allows the user to modify the information about a specific protein codified by the gene.
   The new protein must be an object of class "Protein", otherwise, the following will raise: "Invalid protein".
@@ -306,19 +306,19 @@ gene2 <- longNonCodingRNAGene(
 
 **Methods of the class**
 
-### getGeneId
+### - getGeneId
 
 ```{r}
 getGeneId(gene2)
 ```
 
-### getSymbol
+### - getSymbol
 
 ```{r}
 getSymbol(gene2)
 ```
 
-### setSymbol
+### - setSymbol
 
   This is a method inherited from the "gene" class, For the class "longNonCodingRNAGene" there have been added additional constrains regarding the new HUGO
   gene symbol. Indeed it must be of class "character" and also must contain specific patters of words (depending on the type of lncRNA gene), otherwise, the
@@ -330,13 +330,13 @@ gene2 <- setSymbol(gene2, "LINC11111")
 gene2
 ```
 
-### getFullName
+### - getFullName
 
 ```{r}
 getFullName(gene2)
 ```
 
-### setFullName
+### - setFullName
 
   This is a method inherited from the "gene" class, For the class "longNonCodingRNAGene" there have been added additional constrains regarding the new
   full gene name. Indeed it must be of class "character" and also must contain specific patters of words (depending on the type of lncRNA gene), otherwise, the
@@ -348,33 +348,33 @@ gene2 <- setFullName(gene2, "long intergenic non-protein coding RNA 01234")
 gene2
 ```
 
-### getDescription
+### - getDescription
 
 ```{r}
 getDescription(gene2)
 ```
 
-### setDescription
+### - setDescription
 
 ```{r}
 gene2 <- setDescription(gene2, "This gene has no specific function")
 gene2
 ```
 
-### getStructure
+### - getStructure
 
 ```{r}
 getStructure(gene2)
 ```
 
-### setStructure
+### - setStructure
 
 ```{r}
 gene2 <- setStructure(gene2, GRanges("chr1:100-200"))
 gene2
 ```
 
-### getLongNonCodingRNA
+### - getLongNonCodingRNA
 
   This method of class "longNonCodingRNAGene" which allows the users to extract and inspect the information about the long Non Coding RNAs.
 
@@ -382,7 +382,7 @@ gene2
 getLongNonCodingRNA(gene2)
 ```
 
-### setLongNonCodingRNA
+### - setLongNonCodingRNA
 
   This method of class "longNonCodingRNAGene" which allows the users to change the information about the long Non Coding RNAs.
 
@@ -433,19 +433,19 @@ gene3 <- microRNAGene(
 
 **Methods of the class**
 
-### getGeneId
+### - getGeneId
 
 ```{r}
 getGeneId(gene3)
 ```
 
-### getSymbol
+### - getSymbol
 
 ```{r}
 getSymbol(gene3)
 ```
 
-### setSymbol
+### - setSymbol
 
   This is a method inherited from the "gene" class, For the class "MicroRNAGene" the new gene symbol has to respect
   different conditions, for example it has to be a character object and also start with "MIR " followed by a number.
@@ -456,13 +456,13 @@ gene3 <- setSymbol(gene3, "MIR 123")
 gene3
 ```
 
-### getFullName
+### - getFullName
 
 ```{r}
 getFullName(gene3)
 ```
 
-### setFullName
+### - setFullName
 
   This is a method inherited from the "gene" class, For the class "MicroRNAGene" the new full name has to respect
   different conditions such as it has to be a character and also starts with "microRNA" followed by a space and then
@@ -473,33 +473,33 @@ gene3 <- setFullName(gene3, "microRNA 1234")
 gene3
 ```
 
-### getDescription
+### - getDescription
 
 ```{r}
 getDescription(gene3)
 ```
 
-### setDescription
+### - setDescription
 
 ```{r}
 gene3 <- setDescription(gene3, "This gene has no specific function")
 gene3
 ```
 
-### getStructure
+### - getStructure
 
 ```{r}
 getStructure(gene3)
 ```
 
-### setStructure
+### - setStructure
 
 ```{r}
 gene3 <- setStructure(gene3, GRanges("chr1:100-200"))
 gene3
 ```
 
-### getMicroRNA
+### - getMicroRNA
 
   This is a method of the class "microRNAgene" class. It allows the users to extract and inspect the information
   about the microRNAs. This object will contain the information about the ID, sequence and silencing mechanism
@@ -509,7 +509,7 @@ gene3
 getMicroRNA(gene3)
 ```
 
-### setMicroRNA
+### - setMicroRNA
 
   This method is called "setMicroRNA" which allows the users to change the information about a specific
   microRNA. The user can change the information about the ID, sequence and silencing mechanism of the
@@ -520,7 +520,7 @@ gene3 <- setMicroRNA(gene3, "ENST01234567891", microRNA(id = "ENST00000000001", 
 gene3
 ```
 
-### lengthProductMRG
+### - lengthProductMRG
 
   This function helps in calculating the length of the RNA sequence of all the microRNA that are codified by the gene
 
@@ -557,19 +557,19 @@ gene4 <- rRNAgene(
 
 **Methods of the class**
 
-### getGeneId
+### - getGeneId
 
 ```{r}
 getGeneId(gene4)
 ```
 
-### getSymbol
+### - getSymbol
 
 ```{r}
 getSymbol(gene4)
 ```
 
-### setSymbol
+### - setSymbol
 
   This is a method inherited from the "gene" class, for the class "rRNAGene" the new full name has to respect
   different conditions such as it has to be a character and also starts with "RNA" followed by a valid ribosomal
@@ -580,13 +580,13 @@ gene4 <- setSymbol(gene4, "RNA45S")
 gene4
 ```
 
-### getFullName
+### - getFullName
 
 ```{r}
 getFullName(gene4)
 ```
 
-### setFullName
+### - setFullName
 
   This is a method inherited from the "gene" class, for the class "rRNAGene" the new full name has to respect
   different conditions such as it has to be a character and also starts with "RNA" followed by a valid ribosomal
@@ -597,7 +597,7 @@ gene4 <- setFullName(gene4, "RNA, 45S ribosomal")
 gene4
 ```
 
-### setRibosomalSub
+### - setRibosomalSub
 
   This is a method for the class "rRNAgene" that allows the user to change the ribosomal subunit. It has to respect
   different conditions, for example it has to be a character object and also be a valid ribosomal subunits. If this is
@@ -608,33 +608,33 @@ gene4 <- setRibosomalSub(gene4, "45S")
 gene4
 ```
 
-### getDescription
+### - getDescription
 
 ```{r}
 getDescription(gene4)
 ```
 
-### setDescription
+### - setDescription
 
 ```{r}
 gene4 <- setDescription(gene4, "This gene has no specific function")
 gene4
 ```
 
-### getStructure
+### - getStructure
 
 ```{r}
 getStructure(gene4)
 ```
 
-### setStructure
+### - setStructure
 
 ```{r}
 gene4 <- setStructure(gene4, GRanges("chr1:100-200"))
 gene4
 ```
 
-### getRRNA
+### - getRRNA
 
   This is a method of the class "rRNAgene" class. It allows the users to extract and inspect the information
   about the rRNA. This object will contain the information about the ID and ribosomal subunit of the rRNA
@@ -644,7 +644,7 @@ gene4
 getRRNA(gene4)
 ```
 
-### setRRNA
+### - setRRNA
 
   This method is called "setRRNA" which allows the users to change the information about the rRNA.
   The user can change the information about the ID ad the ribosomal subunit of the rRNA.
@@ -654,7 +654,7 @@ gene4 <- setRRNA(gene4, rRNA(id = "ENST00000000001", rRNA_sequence = RNAString("
 gene4
 ```
 
-### lengthProductRRG
+### - lengthProductRRG
 
   This function helps in calculating the length of the RNA sequence of the rRNA that is codified by the gene.
 
@@ -688,19 +688,19 @@ gene5 <- tRNAgene(
 
 **Methods of the class**
 
-### getGeneId
+### - getGeneId
 
 ```{r}
 getGeneId(gene5)
 ```
 
-### getSymbol
+### - getSymbol
 
 ```{r}
 getSymbol(gene5)
 ```
 
-### setSymbol
+### - setSymbol
 
   This is a method inherited from the "gene" class, for the class "tRNAGene" the new HUGO gene symbol has to respect
   different conditions such as it has to be a character and also starts with "TR" followed by a valid aminoacid symbol,
@@ -711,7 +711,7 @@ gene5 <- setSymbol(gene5, "TRM-AUU1-1")
 gene5
 ```
 
-### setAminoacid
+### - setAminoacid
 
   This is a method of the class "tRNAgene". The new aminoacid has to respect different conditions, for example
   it has to be of class AAString and also has to be a valid aminoacid. If this is not the case, then the following
@@ -722,7 +722,7 @@ gene5 <- setAminoacid(gene5, AAString("M"))
 gene5
 ```
 
-### setAnticodon
+### - setAnticodon
 
   This is a method of the class "tRNAgene". The new anticodon has to respect different conditions, for example
   it has to be of class RNAString and also its length has to be of 3 base. If this is not the case, then the
@@ -733,13 +733,13 @@ gene5 <- setAnticodon(gene5, RNAString("AUU"))
 gene5
 ```
 
-### getFullName
+### - getFullName
 
 ```{r}
 getFullName(gene5)
 ```
 
-### setFullName
+### - setFullName
 
   This is a method inherited from the "gene" class, for the class "tRNAGene" the new full name has to respect
   different conditions such as it has to be a character and also starts with "tRNA-" followed by a valid aminoacid,
@@ -750,33 +750,33 @@ gene5 <- setFullName(gene5, "tRNA-METAUU 1-1")
 gene5
 ```
 
-### getDescription
+### - getDescription
 
 ```{r}
 getDescription(gene1)
 ```
 
-### setDescription
+### - setDescription
 
 ```{r}
 gene5 <- setDescription(gene5, "This gene has no specific function")
 gene5
 ```
 
-### getStructure
+### - getStructure
 
 ```{r}
 getStructure(gene5)
 ```
 
-### setStructure
+### - setStructure
 
 ```{r}
 gene5 <- setStructure(gene5, GRanges("chr1:100-200"))
 gene5
 ```
 
-### getRRNA
+### - getRRNA
 
   This is a method of the class "tRNAgene" class. It allows the user to acccess the information about the tRNA codified by the gene.
   This object will contain the information about the ID, sequence of the tRNA and the aminoacid and anticodon carried by it.
@@ -785,7 +785,7 @@ gene5
 getTRNA(gene5)
 ```
 
-###  setRRNA
+###  - setRRNA
 
   This is a method of the class "tRNAgene" class. It allows the user to acccess the information about the tRNA codified by the gene.
   This object will contain the information about the ID, sequence of the tRNA and the aminoacid and anticodon carried by it.
@@ -795,7 +795,7 @@ gene5 <- setTRNA(gene5, tRNA(id = "ENST00000000001", tRNA_sequence = RNAString("
 gene5
 ```
 
-### lengthProductTRG
+### - lengthProductTRG
 
   This function helps in calculating the length of the RNA sequence of the tRNA that is codified by the gene.
 

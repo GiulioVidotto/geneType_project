@@ -118,14 +118,6 @@ gene3 <- microRNAGene(
 )
 ```
 
-## Contributing
-
-Contributions and feedback are welcome! Please open an issue or submit a pull request on the GitHub repository.
-
-## License
-
-[Insert License Information Here]
-
 ## Contact
 
 For any questions or further information, please contact:

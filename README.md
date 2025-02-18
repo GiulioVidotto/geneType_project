@@ -16,7 +16,7 @@
   a class for each one of them has been created and inherited from a virtual class called "product".
 
 
-**gene class**
+# gene class
 
 
 **Description of the class**
@@ -101,7 +101,7 @@
   second parameter must be of class GRanges, otherwise the method will rise the followin "The new defined structure of the gene is not correct".
 
 
-# - product class
+# product class
 
 
 

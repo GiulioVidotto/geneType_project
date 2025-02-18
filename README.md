@@ -30,7 +30,7 @@
   "The gene enemblID is not correct".
 
 
-## Methods of the class
+### Methods of the class
 #### - getGeneId
 
   This is a method of the "gene" class, called **"getGeneId"**, that can be used to access information about the Ensembl ID gene. 
@@ -39,14 +39,14 @@
 
 
 
-### - getSymbol
+#### - getSymbol
 
   This is a method of the "gene" class called **"getSymbol"**. It can be used to access information about the the HUGO gene symbol.
   This method has only one parameter, called "object", and it is the gene for which the user wants to know the HUGO gene symbol.
 
 
 
-### - setSymbol
+#### - setSymbol
 
   This is a method of the "gene" class, called **"setSymbol"**, that can be used to change the information about the HUGO gene symbol.
   This method requires to specify two paramters. the first one, called "object" which rapresents a gene and the second one, called
@@ -54,14 +54,14 @@
 
 
 
-### - getFullName
+#### - getFullName
 
   This is a method of the "gene" class, called **"getFullName"**, that allows the user to extract the information about the full name
   of the gene. This method has only one parameter, called "object", which is a gene.
 
 
 
-### - setFullName
+#### - setFullName
 
   This is a method of the "gene" class, called **"setFullName"**, that allows the user to change the information about the full name of
   the gene. This method has two parameters, the first one is called "object" which represents a gene, and the second parameter is called
@@ -69,7 +69,7 @@
 
 
 
-### - getDescription
+#### - getDescription
 
   This is a method of the "gene" class, called **"getDescription"**, and it allows the user to extract the description of a specific 
   gene. This method has only one parameter, which is called "object", and it is the gene for which the user wants to inspect the
@@ -77,7 +77,7 @@
 
 
 
-### - setDescription
+#### - setDescription
 
   This is a method of the "gene" class, called **"setDescription"**, and it allows the user to change the description of a specific gene. It
   takes as parameters, a gene ("object") and a new description for the gene ("new_description"). The new description must be of class "character",
@@ -85,7 +85,7 @@
 
 
 
-### - getStructure
+#### - getStructure
 
   This is a method of the "gene" class, called **"getStructure"**, and it allows the user to extract from a specific object all the information on
   the structure of the gene. It reqeuires only one parameter, which is called "object" and it is the gene for which the user wants to know the
@@ -93,7 +93,7 @@
 
 
 
-### - setStructure
+#### - setStructure
 
   This is a method of the "gene" class, called **"setStructure"**, that is useful to extract from a specific gene all the information about the structure.
   It requires two paramters: the "object" parameter, which is the gene, and the "new_structure" parameter which is the new structure of the gene. This 
@@ -104,7 +104,7 @@
 
 
 
-**Description of the class**
+### **Description of the class**
 
   Because for most of the genes, the products are lists of specific elements, to create and specify a clear structure of these lists it was decided to define a new class called "product".
   This class is a virtual class that represents the products of the different genes in a general way. Indeed, in this virtual class, the only attribute specified is the Ensembl ID of

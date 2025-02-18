@@ -30,8 +30,8 @@
   "The gene enemblID is not correct".
 
 
-### **Methods of the class**
-**- getGeneId**
+## Methods of the class
+#### - getGeneId
 
   This is a method of the "gene" class, called **"getGeneId"**, that can be used to access information about the Ensembl ID gene. 
   The get method is the only method specified for the Ensembl ID gene because usually the ID of a gene should not change, even

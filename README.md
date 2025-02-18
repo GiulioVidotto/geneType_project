@@ -32,7 +32,7 @@
 
 ### **Methods of the class**
 
-### - getGeneId
+#### - getGeneId
 
   This is a method of the "gene" class, called **"getGeneId"**, that can be used to access information about the Ensembl ID gene. 
   The get method is the only method specified for the Ensembl ID gene because usually the ID of a gene should not change, even
@@ -40,7 +40,7 @@
 
 
 
-### - getSymbol
+#### - getSymbol
 
   This is a method of the "gene" class called **"getSymbol"**. It can be used to access information about the the HUGO gene symbol.
   This method has only one parameter, called "object", and it is the gene for which the user wants to know the HUGO gene symbol.

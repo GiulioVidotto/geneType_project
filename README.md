@@ -1,7 +1,7 @@
 # GeneTypes package
 
 
-## **Description of the package**
+### **Description of the package**
 
   As of today, in the human genome, there have been identified around 100.000 genes. One of the main differences, among all
   of the genes, is regarding the functions of the product or products transcribed and, in some cases, translated.
@@ -19,7 +19,7 @@
 # Gene class
 
 
-## **Description of the class**
+### **Description of the class**
 
   This class represents the genes in a general way. Indeed, it stores all the information that is common to all the genes.
   In particular, it defines the Ensmbl ID, the HUGO symbol, the name of the gene, a short description, and all the information

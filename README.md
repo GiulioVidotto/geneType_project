@@ -1,18 +1,18 @@
 # geneTypes Package
 
-Il pacchetto `geneTypes` fornisce un framework completo per rappresentare i vari tipi di geni nel genoma umano utilizzando le classi S4. Supporta la modellazione sia dei geni codificanti proteine che dei geni non codificanti, insieme ai loro prodotti (ad esempio, proteine, RNA lunghi non codificanti, microRNA, rRNA e tRNA).
+The `geneTypes` package provides a comprehensive framework for representing various gene types in the human genome using S4 classes. It supports modeling both protein-coding and non-coding genes, along with their products (e.g., proteins, long non-coding RNAs, microRNAs, rRNAs, and tRNAs).
 
-Nel genoma umano sono stati identificati quasi 100.000 geni. Tra questi, circa 20.000-25.000 codificano per proteine, mentre il resto produce vari tipi di molecole di RNA. Il pacchetto modella questa diversità fornendo classi specifiche per ciascun tipo di gene:
+In the human genome, nearly 100,000 genes have been identified. Among these, approximately 20,000-25,000 encode proteins, while the remaining genes give rise to various types of RNA molecules. The package models this diversity by providing specific classes for each gene type:
 
-- `proteinCodingGene`: Rappresenta i geni che codificano per proteine.
-- `longNonCodingRNAGene`: Rappresenta i geni che codificano per RNA lunghi non codificanti.
-- `microRNAGene`: Rappresenta i geni che codificano per microRNA.
-- `rRNAgene`: Rappresenta i geni che codificano per rRNA.
-- `tRNAgene`: Rappresenta i geni che codificano per tRNA.
+- `proteinCodingGene`: Represents genes that encode proteins.
+- `longNonCodingRNAGene`: Represents genes that encode long non-coding RNAs.
+- `microRNAGene`: Represents genes that encode microRNAs.
+- `rRNAgene`: Represents genes that encode ribosomal RNAs.
+- `tRNAgene`: Represents genes that encode transfer RNAs.
 
 ## Installation
 
-### Installazione tramite Bioconductor
+### Installation via Bioconductor
 
 ```r
 if (!requireNamespace("BiocManager", quietly = TRUE))
@@ -20,7 +20,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 BiocManager::install("geneTypes")
 ```
 
-### Installazione da GitHub
+### Installation from GitHub
 
 ```r
 devtools::install_github("GiulioVidotto/geneTypes")
@@ -28,7 +28,7 @@ devtools::install_github("GiulioVidotto/geneTypes")
 
 ## Loading the Package
 
-Prima di utilizzare il pacchetto, carica le librerie necessarie:
+Before using the package, load the necessary libraries:
 
 ```r
 library(GenomicRanges)
@@ -38,23 +38,23 @@ library(geneTypes)
 
 ## Package Structure and Usage
 
-### Classi Virtuali
+### Virtual Classes
 
-- **gene**: Cattura gli attributi comuni a tutti i geni, come l'Ensembl ID, il simbolo HUGO, il nome completo del gene, la descrizione e la struttura del gene.
-    - **Metodi:**
+- **gene**: Captures the common attributes of all genes, such as Ensembl ID, HUGO symbol, full gene name, description, and gene structure.
+    - **Methods:**
         - `getGeneId(object)`
         - `getSymbol(object)` / `setSymbol(object, new_gene_symbol)`
         - `getFullName(object)` / `setFullName(object, new_gene_full_name)`
         - `getDescription(object)` / `setDescription(object, new_description)`
         - `getStructure(object)` / `setStructure(object, new_structure)`
 
-- **product**: Una classe virtuale per i prodotti genici che include l'Ensembl ID come attributo comune.
+- **product**: A virtual class for gene products that includes Ensembl ID as a common attribute.
 
-### Classi Specifiche ed Esempi
+### Specific Classes and Examples
 
 #### 1. proteinCodingGene
 
-Rappresenta i geni codificanti per proteine, includendo una lista di oggetti di classe `protein`.
+Represents protein-coding genes, including a list of `protein` objects.
 
 ```r
 gene1 <- proteinCodingGene(
@@ -76,7 +76,7 @@ gene1 <- proteinCodingGene(
 
 #### 2. longNonCodingRNAGene
 
-Rappresenta i geni che codificano per RNA lunghi non codificanti.
+Represents genes that encode long non-coding RNAs.
 
 ```r
 gene2 <- longNonCodingRNAGene(
@@ -98,7 +98,7 @@ gene2 <- longNonCodingRNAGene(
 
 #### 3. microRNAGene
 
-Rappresenta i geni che codificano per microRNA.
+Represents genes that encode microRNAs.
 
 ```r
 gene3 <- microRNAGene(
@@ -120,15 +120,15 @@ gene3 <- microRNAGene(
 
 ## Contributing
 
-Contributi e feedback sono ben accetti! Per favore apri una issue o invia una pull request sul repository GitHub.
+Contributions and feedback are welcome! Please open an issue or submit a pull request on the GitHub repository.
 
 ## License
 
-[Inserisci qui le informazioni sulla licenza]
+[Insert License Information Here]
 
 ## Contact
 
-Per qualsiasi domanda o ulteriore informazione, contatta:
+For any questions or further information, please contact:
 
 **Giulio Vidotto**  
-Email: [vidottogiulio@libero.it](mailto:vidottogiulio@libero.it)
+Email: [vidottogiulio@libero.it]
